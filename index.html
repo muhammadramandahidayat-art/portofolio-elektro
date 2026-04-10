@@ -17,29 +17,37 @@
         .img-container { background-color: #1e293b; display: flex; align-items: center; justify-content: center; color: white; overflow: hidden; }
         .img-container img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* --- EFEK BAYANGAN RANGKAIAN TEKNIS (web.jpeg) --- */
+             /* --- EFEK 3 GAMBAR BERBEDA & SELANG SELING --- */
         .hero-with-bg {
             position: relative; 
             overflow: hidden;
         }
- /* Pengaturan agar foto tidak terlalu zoom */
+
         .hero-with-bg::before {
             content: "";
             position: absolute;
             top: 0; 
-            right: 0; /* Letakkan di sisi kanan */
+            left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('web.jpeg'); 
             
-            /* SOLUSI ZOOM: Ganti 'cover' menjadi 'contain' atau persentase */
-            background-size: contain; 
-            background-position: right center; /* Geser gambar ke kanan agar tidak menabrak teks di kiri */
+            /* MENGGUNAKAN 3 GAMBAR BERBEDA */
+            background-image: url('web.jpeg'), url('projek-plc.jpeg'), url('projek-iot.jpeg'); 
+            
+            /* Ukuran gambar diatur agar proporsional */
+            background-size: 380px auto, 320px auto, 350px auto; 
+            
+            /* POSISI BERBEDA (Selang-Seling)
+               1. web.jpeg: Kiri Atas
+               2. projek-plc.jpeg: Tengah
+               3. projek-iot.jpeg: Kanan Bawah
+            */
+            background-position: left 2% top 8%, center center, right 2% bottom 8%;
             background-repeat: no-repeat;
             
-            /* Pengaturan Transparansi */
-            opacity: 0.15; 
-            filter: grayscale(100%) brightness(1.3) contrast(1.1);
+            /* Transparansi tipis (Watermark) */
+            opacity: 0.12; 
+            filter: grayscale(100%) brightness(1.4);
             
             z-index: 1; 
             pointer-events: none;
