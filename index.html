@@ -144,18 +144,32 @@
                         </div>
                     </div>
 
-                    <div onclick="openCertModal()" class="mt-12 p-6 rounded-2xl bg-slate-900 text-white flex flex-col sm:flex-row items-center gap-6 border-b-4 border-blue-500 cursor-pointer hover:bg-slate-800 transition-all shadow-lg active:scale-95 group">
-                        <div class="text-5xl text-blue-400 group-hover:scale-110 transition duration-300">
-                            <i class="fa-solid fa-award"></i>
-                        </div>
-                        <div class="text-center sm:text-left">
-                            <h4 class="font-bold text-lg flex items-center justify-center sm:justify-start gap-2">
-                                Senior Engineer Certified 
-                                <span class="text-[10px] bg-blue-600 px-2 py-0.5 rounded-full uppercase italic">Klik untuk lihat</span>
-                            </h4>
-                            <p class="text-gray-400 text-sm uppercase tracking-wide">BNSP - Pemelihara Elektronika Industri</p>
-                        </div>
-                    </div>
+                   <div onclick="openCertModal()" class="mt-8 p-4 md:p-6 rounded-2xl bg-slate-900 text-white flex items-center gap-4 md:gap-6 border-b-4 border-blue-500 cursor-pointer hover:bg-slate-800 transition-all shadow-lg active:scale-95 group relative overflow-hidden">
+    
+    <div class="absolute top-0 right-0 w-16 h-16 bg-blue-500/10 rotate-45 translate-x-8 -translate-y-8"></div>
+
+    <div class="text-3xl md:text-5xl text-blue-400 group-hover:scale-110 transition duration-300 shrink-0">
+        <i class="fa-solid fa-award"></i>
+    </div>
+
+    <div class="flex-grow">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+            <h4 class="font-bold text-sm md:text-lg leading-tight">
+                Senior Engineer Certified
+            </h4>
+            <span class="inline-block w-fit text-[9px] md:text-[10px] bg-blue-600/80 px-2 py-0.5 rounded-full uppercase italic tracking-wider font-semibold">
+                Klik untuk lihat
+            </span>
+        </div>
+        <p class="text-gray-400 text-[11px] md:text-sm uppercase tracking-wide mt-1">
+            BNSP - Pemelihara Elektronika Industri
+        </p>
+    </div>
+
+    <div class="text-gray-500 md:hidden">
+        <i class="fa-solid fa-chevron-right text-xs"></i>
+    </div>
+</div>
                 </div>
             </div>
         </div>
