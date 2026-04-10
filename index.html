@@ -9,7 +9,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         
-        /* PERBAIKAN NAVIGASI: Menambahkan offset saat scroll agar judul tidak tertutup navbar */
         html { 
             scroll-behavior: smooth; 
             scroll-padding-top: 80px; 
@@ -46,28 +45,28 @@
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <span class="font-bold text-lg md:text-xl tracking-tight text-blue-800">Muhammad Ramanda Hidayat</span>
             
-      <div class="hidden md:flex space-x-8 font-medium items-center text-gray-600">
-    <a href="#home" class="hover:text-blue-600 transition">Beranda</a>
-    <a href="#about" class="hover:text-blue-600 transition">Tentang</a>
-    <a href="#skills" class="hover:text-blue-600 transition">Keahlian</a>
-    <a href="#projects" class="hover:text-blue-600 transition">Proyek</a>
-    <a href="#contact" class="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition shadow-md shadow-blue-200">
-        Kontak
-    </a>
-</div>
+            <div class="hidden md:flex space-x-8 font-medium items-center text-gray-600">
+                <a href="#home" class="hover:text-blue-600 transition">Beranda</a>
+                <a href="#about" class="hover:text-blue-600 transition">Tentang</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Keahlian</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Proyek</a>
+                <a href="#contact" class="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition shadow-md shadow-blue-200">
+                    Kontak
+                </a>
+            </div>
 
             <button id="menu-btn" class="md:hidden text-2xl text-blue-900 focus:outline-none">
                 <i class="fa-solid fa-bars-staggered"></i>
             </button>
         </div>
 
-     <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-6 py-6 space-y-4 shadow-xl text-center">
-    <a href="#home" class="block font-semibold py-2 border-b border-gray-50 text-gray-700">Beranda</a>
-    <a href="#about" class="block font-semibold py-2 border-b border-gray-50 text-gray-700">Tentang</a>
-    <a href="#skills" class="block font-semibold py-2 border-b border-gray-50 text-gray-700">Keahlian</a>
-    <a href="#projects" class="block font-semibold py-2 border-b border-gray-50 text-gray-700">Proyek</a>
-    <a href="#contact" class="block font-bold py-3 text-white bg-blue-600 rounded-xl mx-4">Kontak</a>
-</div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-6 py-6 space-y-4 shadow-xl text-center">
+            <a href="#home" class="block font-semibold py-2 border-b border-gray-50 text-gray-700">Beranda</a>
+            <a href="#about" class="block font-semibold py-2 border-b border-gray-50 text-gray-700">Tentang</a>
+            <a href="#skills" class="block font-semibold py-2 border-b border-gray-50 text-gray-700">Keahlian</a>
+            <a href="#projects" class="block font-semibold py-2 border-b border-gray-50 text-gray-700">Proyek</a>
+            <a href="#contact" class="block font-bold py-3 text-white bg-blue-600 rounded-xl mx-4">Kontak</a>
+        </div>
     </nav>
 
     <section id="home" class="min-h-screen flex items-center pt-24 pb-12 gradient-bg text-white hero-with-bg px-6">
@@ -124,17 +123,33 @@
 
                 <div class="lg:w-7/12">
                     <h2 class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2">Kurikulum Vitae</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold text-blue-900 mb-10">Pendidikan & Sertifikasi</h3>
+                    <h3 class="text-3xl md:text-4xl font-bold text-blue-900 mb-10">Pendidikan & Pengalaman</h3>
                     
                     <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
+                        
                         <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                             <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-blue-600 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
                                 <i class="fa-solid fa-graduation-cap text-xs"></i>
                             </div>
-                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl border-l-4 border-l-blue-600 shadow-sm">
                                 <time class="font-bold text-blue-600">D4 Sarjana Terapan</time>
                                 <div class="text-slate-900 font-bold">Politeknik Negeri Malang</div>
-                                <p class="text-gray-500 text-sm italic">IPK 3.60 | Sistem Otomasi & Maintenance</p>
+                                <p class="text-gray-500 text-sm italic">Sistem Otomasi & Maintenance</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-blue-100 text-blue-600 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                <i class="fa-solid fa-industry text-xs"></i>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-blue-50/50 p-4 rounded-xl border border-blue-100 italic">
+                                <time class="text-[10px] font-bold text-blue-500 uppercase">Magang Industri (D4)</time>
+                                <div class="text-slate-900 font-bold text-sm">Electrical Maintenance Intern</div>
+                                <div class="text-gray-700 text-xs font-medium">PT. [Nama Perusahaan Magang D4]</div>
+                                <ul class="text-gray-500 text-[11px] mt-1 list-disc list-inside">
+                                    <li>Melakukan troubleshooting PLC & SCADA industri.</li>
+                                    <li>Membantu pemeliharaan preventif sistem kontrol panel.</li>
+                                </ul>
                             </div>
                         </div>
 
@@ -142,45 +157,26 @@
                             <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-gray-400 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
                                 <i class="fa-solid fa-book-open text-xs"></i>
                             </div>
-                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl border-l-4 border-l-gray-400 shadow-sm">
                                 <time class="font-bold text-gray-600">D3 Ahli Madya</time>
                                 <div class="text-slate-900 font-bold">Politeknik Negeri Malang</div>
-                                <p class="text-gray-500 text-sm">Dasar Kelistrikan Industri & Mikroprosesor</p>
+                                <p class="text-gray-500 text-sm italic">Dasar Kelistrikan & Mikroprosesor</p>
                             </div>
-                            <h3 class="text-3xl md:text-4xl font-bold text-blue-900 mb-10 mt-16">Pengalaman Magang</h3>
+                        </div>
 
-<div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
-    
-    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-blue-600 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-            <i class="fa-solid fa-industry text-xs"></i>
-        </div>
-        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-5 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-            <time class="font-bold text-blue-600">Januari 2024 - April 2024</time>
-            <div class="text-slate-900 font-bold text-lg">Electrical Maintenance Intern</div>
-            <div class="text-gray-700 font-medium">[Nama Perusahaan Tempat Magang]</div>
-            <ul class="text-gray-500 text-sm mt-2 list-disc list-inside space-y-1">
-                <li>Melakukan pemeliharaan preventif pada panel distribusi listrik.</li>
-                <li>Troubleshooting sistem otomasi berbasis PLC OMRON di lini produksi.</li>
-                <li>Membantu kalibrasi sensor industri dan transmitter suhu.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-gray-400 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-            <i class="fa-solid fa-tools text-xs"></i>
-        </div>
-        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-5 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-            <time class="font-bold text-gray-600">Periode Waktu</time>
-            <div class="text-slate-900 font-bold text-lg">Posisi Magang</div>
-            <div class="text-gray-700 font-medium">Nama Instansi/Perusahaan</div>
-            <p class="text-gray-500 text-sm mt-2 leading-relaxed">
-                Deskripsi singkat mengenai tanggung jawab atau pencapaian selama magang di bidang teknik elektro/otomasi.
-            </p>
-        </div>
-    </div>
-</div>
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-gray-100 text-gray-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                <i class="fa-solid fa-tools text-xs"></i>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gray-50 p-4 rounded-xl border border-gray-200 italic">
+                                <time class="text-[10px] font-bold text-gray-500 uppercase">Magang Industri (D3)</time>
+                                <div class="text-slate-900 font-bold text-sm">Technician Intern</div>
+                                <div class="text-gray-700 text-xs font-medium">PT. [Nama Perusahaan Magang D3]</div>
+                                <ul class="text-gray-500 text-[11px] mt-1 list-disc list-inside">
+                                    <li>Instalasi kabel distribusi dan perakitan panel kontrol motor.</li>
+                                    <li>Mempelajari sistem kelistrikan industri dasar.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
@@ -190,11 +186,10 @@
                         <div class="flex-grow">
                             <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
                                 <h4 class="font-bold text-sm md:text-lg leading-tight">Senior Engineer Certified</h4>
-                                <span class="inline-block w-fit text-[9px] md:text-[10px] bg-blue-600/80 px-2 py-0.5 rounded-full uppercase italic tracking-wider font-semibold">Klik untuk lihat</span>
+                                <span class="inline-block w-fit text-[9px] md:text-[10px] bg-blue-600/80 px-2 py-0.5 rounded-full uppercase italic tracking-wider font-semibold">BNSP</span>
                             </div>
-                            <p class="text-gray-400 text-[11px] md:text-sm uppercase tracking-wide mt-1">BNSP - Pemelihara Elektronika Industri</p>
+                            <p class="text-gray-400 text-[11px] md:text-sm uppercase tracking-wide mt-1">Pemelihara Elektronika Industri</p>
                         </div>
-                        <div class="text-gray-500 md:hidden"><i class="fa-solid fa-chevron-right text-xs"></i></div>
                     </div>
                 </div>
             </div>
@@ -257,35 +252,7 @@
                         <p class="text-gray-600 mt-3 text-sm leading-relaxed">Monitoring sensor asap via dashboard real-time untuk proteksi gedung industri.</p>
                     </div>
                 </div>
-                <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg group">
-                    <div class="h-56 bg-slate-800 overflow-hidden flex items-center justify-center relative">
-                        <img src="projek-solar.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60">
-                        <div class="absolute inset-0 flex flex-col items-center justify-center p-4">
-                           <i class="fa-solid fa-sun text-4xl text-yellow-400 mb-2"></i>
-                           <span class="text-xs font-mono text-white opacity-80 uppercase tracking-tighter">Renewable Energy</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <span class="text-yellow-600 text-xs font-bold uppercase tracking-widest">Power Electronics</span>
-                        <h3 class="text-xl font-bold mt-2">MPPT Solar Charge Controller</h3>
-                        <p class="text-gray-600 mt-3 text-sm leading-relaxed">Desain topologi DC-DC converter dengan efisiensi 95% untuk optimasi energi surya.</p>
-                    </div>
                 </div>
-                <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg group">
-                    <div class="h-56 bg-slate-800 overflow-hidden flex items-center justify-center relative">
-                        <img src="projek-absensi.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60">
-                        <div class="absolute inset-0 flex flex-col items-center justify-center p-4">
-                           <i class="fa-solid fa-id-card text-4xl text-green-400 mb-2"></i>
-                           <span class="text-xs font-mono text-white opacity-80 uppercase tracking-tighter">Database Integration</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <span class="text-green-600 text-xs font-bold uppercase tracking-widest">Software & Hardware</span>
-                        <h3 class="text-xl font-bold mt-2">IoT Employee Attendance</h3>
-                        <p class="text-gray-600 mt-3 text-sm leading-relaxed">Sinkronisasi data otomatis antara hardware RFID dan SQL Server untuk laporan real-time.</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -293,8 +260,10 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <h2 class="text-3xl font-bold text-slate-900 mb-4">Siap Berkontribusi bagi Perusahaan Anda</h2>
-                <p class="text-gray-500 mb-8">Saya adalah lulusan Teknik Elektro yang berdedikasi untuk memberikan solusi teknis terbaik di bidang Maintenance, Otomasi Industri, dan Manajemen Teknis</p>
-                <a href="CV-Ramanda-Hidayat.pdf" target="_blank" class="inline-flex items-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-800 transition shadow-lg"><i class="fa-solid fa-file-pdf"></i> Lihat Curriculum Vitae (CV)</a>
+                <p class="text-gray-500 mb-8">Saya adalah lulusan Teknik Elektro yang berdedikasi untuk memberikan solusi teknis terbaik di bidang Maintenance dan Otomasi Industri.</p>
+                <a href="CV-Ramanda-Hidayat.pdf" target="_blank" class="inline-flex items-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-800 transition shadow-lg">
+                    <i class="fa-solid fa-file-pdf"></i> Lihat Curriculum Vitae (CV)
+                </a>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
                 <a href="mailto:muhammadramandahidayat@gmail.com" class="p-6 rounded-2xl bg-gray-50 hover:bg-blue-50 transition border border-gray-100 flex flex-col items-center group">
@@ -321,7 +290,7 @@
     </footer>
 
     <div id="certModal" class="fixed inset-0 z-[150] hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm">
-        <div class="relative max-w-4xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl transform transition-all animate-in zoom-in duration-300">
+        <div class="relative max-w-4xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl">
             <div class="flex justify-between items-center p-4 border-b">
                 <h3 class="font-bold text-blue-900">Sertifikat BNSP - Muhammad Ramanda Hidayat</h3>
                 <button onclick="closeCertModal()" class="text-gray-500 hover:text-red-600 transition text-3xl px-2">&times;</button>
@@ -333,19 +302,17 @@
     </div>
 
     <script>
+        // Menu Mobile Toggle
         const btn = document.getElementById('menu-btn');
         const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
+        // Close menu on click
         document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
+            link.addEventListener('click', () => menu.classList.add('hidden'));
         });
 
+        // Modal Logic
         const certModal = document.getElementById('certModal');
         function openCertModal() {
             certModal.classList.remove('hidden');
@@ -357,9 +324,6 @@
         }
         certModal.addEventListener('click', (e) => {
             if (e.target === certModal) closeCertModal();
-        });
-        document.addEventListener('keydown', (e) => {
-            if (e.key === "Escape") closeCertModal();
         });
     </script>
 </body>
