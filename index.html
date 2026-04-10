@@ -8,13 +8,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        
+        /* PERBAIKAN NAVIGASI: Menambahkan offset saat scroll agar judul tidak tertutup navbar */
+        html { 
+            scroll-behavior: smooth; 
+            scroll-padding-top: 80px; 
+        }
+
+        body { font-family: 'Inter', sans-serif; }
         
         .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
         
         .project-card:hover { transform: translateY(-8px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         
-        /* Background Hero */
         .hero-with-bg { position: relative; overflow: hidden; }
         .hero-with-bg::before {
             content: "";
@@ -30,7 +36,6 @@
             pointer-events: none;
         }
 
-        /* Mobile Menu Transition */
         #mobile-menu { transition: all 0.3s ease-in-out; }
     </style>
 </head>
@@ -41,12 +46,12 @@
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <span class="font-bold text-lg md:text-xl tracking-tight text-blue-800">Muhammad Ramanda Hidayat</span>
             
-            <div class="hidden md:flex space-x-8 font-medium">
+            <div class="hidden md:flex space-x-8 font-medium text-gray-600">
                 <a href="#home" class="hover:text-blue-600 transition">Beranda</a>
                 <a href="#about" class="hover:text-blue-600 transition">Tentang</a>
                 <a href="#skills" class="hover:text-blue-600 transition">Keahlian</a>
                 <a href="#projects" class="hover:text-blue-600 transition">Proyek</a>
-                <a href="#contact" class="text-blue-700 font-bold border-b-2 border-blue-700">Kontak</a>
+                <a href="#contact" class="hover:text-blue-600 transition px-3 py-1 bg-blue-50 rounded-lg text-blue-700">Kontak</a>
             </div>
 
             <button id="menu-btn" class="md:hidden text-2xl text-blue-900 focus:outline-none">
@@ -54,12 +59,12 @@
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-6 py-6 space-y-4 shadow-xl">
-            <a href="#home" class="block font-semibold py-2 border-b border-gray-50">Beranda</a>
-            <a href="#about" class="block font-semibold py-2 border-b border-gray-50">Tentang</a>
-            <a href="#skills" class="block font-semibold py-2 border-b border-gray-50">Keahlian</a>
-            <a href="#projects" class="block font-semibold py-2 border-b border-gray-50">Proyek</a>
-            <a href="#contact" class="block font-bold py-2 text-blue-700">Kontak</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-6 py-6 space-y-4 shadow-xl text-center">
+            <a href="#home" class="block font-semibold py-2 border-b border-gray-50 hover:bg-gray-50">Beranda</a>
+            <a href="#about" class="block font-semibold py-2 border-b border-gray-50 hover:bg-gray-50">Tentang</a>
+            <a href="#skills" class="block font-semibold py-2 border-b border-gray-50 hover:bg-gray-50">Keahlian</a>
+            <a href="#projects" class="block font-semibold py-2 border-b border-gray-50 hover:bg-gray-50">Proyek</a>
+            <a href="#contact" class="block font-bold py-2 text-blue-700 bg-blue-50 rounded-lg">Kontak</a>
         </div>
     </nav>
 
@@ -120,7 +125,6 @@
                     <h3 class="text-3xl md:text-4xl font-bold text-blue-900 mb-10">Pendidikan & Sertifikasi</h3>
                     
                     <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
-                        
                         <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                             <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-blue-600 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
                                 <i class="fa-solid fa-graduation-cap text-xs"></i>
@@ -144,35 +148,48 @@
                         </div>
                     </div>
 
-                   <div onclick="openCertModal()" class="mt-8 p-4 md:p-6 rounded-2xl bg-slate-900 text-white flex items-center gap-4 md:gap-6 border-b-4 border-blue-500 cursor-pointer hover:bg-slate-800 transition-all shadow-lg active:scale-95 group relative overflow-hidden">
-    
-    <div class="absolute top-0 right-0 w-16 h-16 bg-blue-500/10 rotate-45 translate-x-8 -translate-y-8"></div>
-
-    <div class="text-3xl md:text-5xl text-blue-400 group-hover:scale-110 transition duration-300 shrink-0">
-        <i class="fa-solid fa-award"></i>
-    </div>
-
-    <div class="flex-grow">
-        <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
-            <h4 class="font-bold text-sm md:text-lg leading-tight">
-                Senior Engineer Certified
-            </h4>
-        </div>
-        <p class="text-gray-400 text-[11px] md:text-sm uppercase tracking-wide mt-1">
-            BNSP - Pemelihara Elektronika Industri
-        </p>
-    </div>
-
-    <div class="text-gray-500 md:hidden">
-        <i class="fa-solid fa-chevron-right text-xs"></i>
-    </div>
-</div>
+                    <div onclick="openCertModal()" class="mt-8 p-4 md:p-6 rounded-2xl bg-slate-900 text-white flex items-center gap-4 md:gap-6 border-b-4 border-blue-500 cursor-pointer hover:bg-slate-800 transition-all shadow-lg active:scale-95 group relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-16 h-16 bg-blue-500/10 rotate-45 translate-x-8 -translate-y-8"></div>
+                        <div class="text-3xl md:text-5xl text-blue-400 group-hover:scale-110 transition duration-300 shrink-0"><i class="fa-solid fa-award"></i></div>
+                        <div class="flex-grow">
+                            <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+                                <h4 class="font-bold text-sm md:text-lg leading-tight">Senior Engineer Certified</h4>
+                                <span class="inline-block w-fit text-[9px] md:text-[10px] bg-blue-600/80 px-2 py-0.5 rounded-full uppercase italic tracking-wider font-semibold">Klik untuk lihat</span>
+                            </div>
+                            <p class="text-gray-400 text-[11px] md:text-sm uppercase tracking-wide mt-1">BNSP - Pemelihara Elektronika Industri</p>
+                        </div>
+                        <div class="text-gray-500 md:hidden"><i class="fa-solid fa-chevron-right text-xs"></i></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-20 bg-gray-50">
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-blue-900 mb-12">Keahlian Teknis</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <i class="fa-solid fa-microchip text-blue-600 text-3xl mb-4"></i>
+                    <h4 class="font-bold">PLC & Automation</h4>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <i class="fa-solid fa-wifi text-blue-600 text-3xl mb-4"></i>
+                    <h4 class="font-bold">IoT Systems</h4>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <i class="fa-solid fa-bolt text-blue-600 text-3xl mb-4"></i>
+                    <h4 class="font-bold">Maintenance</h4>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <i class="fa-solid fa-code text-blue-600 text-3xl mb-4"></i>
+                    <h4 class="font-bold">C++ / SQL</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-center text-blue-900 mb-12">Proyek Terpilih</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -190,7 +207,6 @@
                         <p class="text-gray-600 mt-3 text-sm leading-relaxed">Implementasi Ladder Diagram pada OMRON PLC dengan sistem safety interlock.</p>
                     </div>
                 </div>
-
                 <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg group">
                     <div class="h-56 bg-slate-800 overflow-hidden flex items-center justify-center relative">
                         <img src="projek-iot.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60">
@@ -205,7 +221,6 @@
                         <p class="text-gray-600 mt-3 text-sm leading-relaxed">Monitoring sensor asap via dashboard real-time untuk proteksi gedung industri.</p>
                     </div>
                 </div>
-
                 <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg group">
                     <div class="h-56 bg-slate-800 overflow-hidden flex items-center justify-center relative">
                         <img src="projek-solar.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60">
@@ -220,7 +235,6 @@
                         <p class="text-gray-600 mt-3 text-sm leading-relaxed">Desain topologi DC-DC converter dengan efisiensi 95% untuk optimasi energi surya.</p>
                     </div>
                 </div>
-
                 <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg group">
                     <div class="h-56 bg-slate-800 overflow-hidden flex items-center justify-center relative">
                         <img src="projek-absensi.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60">
@@ -243,59 +257,46 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <h2 class="text-3xl font-bold text-slate-900 mb-4">Tertarik Mengajak Saya Bergabung?</h2>
-                <p class="text-gray-500 mb-8">
-                    Saya sedang mencari peluang karir di bidang <b>Maintenance Engineer, Supervisor,</b> atau <b>Management Trainee</b>.
-                </p>
-                <a href="CV-Ramanda-Hidayat.pdf" target="_blank" class="inline-flex items-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-800 transition shadow-lg">
-                    <i class="fa-solid fa-file-pdf"></i> Lihat Curriculum Vitae (CV)
-                </a>
+                <p class="text-gray-500 mb-8">Saya sedang mencari peluang karir di bidang <b>Maintenance Engineer, Supervisor,</b> atau <b>Management Trainee</b>.</p>
+                <a href="CV-Ramanda-Hidayat.pdf" target="_blank" class="inline-flex items-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-800 transition shadow-lg"><i class="fa-solid fa-file-pdf"></i> Lihat Curriculum Vitae (CV)</a>
             </div>
-            
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-                <a href="mailto:muhammadramandahidayat@gmail.com" class="p-6 rounded-2xl bg-gray-50 hover:bg-blue-50 transition-colors border border-gray-100 flex flex-col items-center group">
+                <a href="mailto:muhammadramandahidayat@gmail.com" class="p-6 rounded-2xl bg-gray-50 hover:bg-blue-50 transition border border-gray-100 flex flex-col items-center group">
                     <i class="fa-solid fa-envelope text-blue-600 text-2xl mb-4 group-hover:scale-110 transition"></i>
                     <span class="text-sm font-bold text-slate-800">Email</span>
                     <span class="text-xs text-gray-500 mt-1">muhammadramandahidayat@gmail.com</span>
                 </a>
-                
                 <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-center">
                     <i class="fa-solid fa-location-dot text-red-500 text-2xl mb-4"></i>
                     <span class="text-sm font-bold text-slate-800">Domisili</span>
                     <span class="text-xs text-gray-500 mt-1 text-center">Sidoarjo, Jawa Timur</span>
                 </div>
-
-                <a href="https://linkedin.com/in/ramandahidayat/" target="_blank" class="p-6 rounded-2xl bg-gray-50 hover:bg-blue-50 transition-colors border border-gray-100 flex flex-col items-center group">
+                <a href="https://linkedin.com/in/ramandahidayat/" target="_blank" class="p-6 rounded-2xl bg-gray-50 hover:bg-blue-50 transition border border-gray-100 flex flex-col items-center group">
                     <i class="fa-brands fa-linkedin text-blue-700 text-2xl mb-4 group-hover:scale-110 transition"></i>
                     <span class="text-sm font-bold text-slate-800">LinkedIn</span>
                     <span class="text-xs text-gray-500 mt-1 text-center">Hubungkan Jaringan Profesional</span>
                 </a>
             </div>
-
             <div class="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-gray-400 uppercase tracking-widest">
                 <p>© 2026 Muhammad Ramanda Hidayat</p>
-                <div class="flex gap-6">
-                    <span>Electrical Engineer</span>
-                    <span>Automation</span>
-                    <span>IoT</span>
-                </div>
+                <div class="flex gap-6"><span>Electrical Engineer</span><span>Automation</span><span>IoT</span></div>
             </div>
         </div>
     </footer>
 
-    <div id="certModal" class="fixed inset-0 z-[150] hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm shadow-2xl">
+    <div id="certModal" class="fixed inset-0 z-[150] hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm">
         <div class="relative max-w-4xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl transform transition-all animate-in zoom-in duration-300">
             <div class="flex justify-between items-center p-4 border-b">
                 <h3 class="font-bold text-blue-900">Sertifikat BNSP - Muhammad Ramanda Hidayat</h3>
-                <button onclick="closeCertModal()" class="text-gray-500 hover:text-red-600 transition text-3xl px-2 font-light">&times;</button>
+                <button onclick="closeCertModal()" class="text-gray-500 hover:text-red-600 transition text-3xl px-2">&times;</button>
             </div>
             <div class="p-2 bg-gray-100 flex justify-center items-center">
-                <img src="sertifikat-bnsp.jpeg" alt="Sertifikat BNSP" class="max-h-[80vh] object-contain shadow-inner">
+                <img src="sertifikat-bnsp.jpeg" alt="Sertifikat BNSP" class="max-h-[80vh] object-contain">
             </div>
         </div>
     </div>
 
     <script>
-        // Navigasi Mobile
         const btn = document.getElementById('menu-btn');
         const menu = document.getElementById('mobile-menu');
 
@@ -309,29 +310,21 @@
             });
         });
 
-        // Modal Sertifikat
         const certModal = document.getElementById('certModal');
-
         function openCertModal() {
             certModal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Kunci scroll
+            document.body.style.overflow = 'hidden';
         }
-
         function closeCertModal() {
             certModal.classList.add('hidden');
-            document.body.style.overflow = 'auto'; // Aktifkan scroll
+            document.body.style.overflow = 'auto';
         }
-
-        // Close modal saat klik di luar gambar
         certModal.addEventListener('click', (e) => {
             if (e.target === certModal) closeCertModal();
         });
-        
-        // Close modal saat tekan tombol ESC
         document.addEventListener('keydown', (e) => {
             if (e.key === "Escape") closeCertModal();
         });
     </script>
-
 </body>
 </html>
