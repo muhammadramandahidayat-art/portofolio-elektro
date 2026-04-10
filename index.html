@@ -97,7 +97,148 @@
         </div>
     </section>
 
-    <!-- Sisa bagian website tetap sama -->
-    
+    <!-- Tentang Saya -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8 text-blue-900">Tentang Saya</h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-10">
+                Lulusan Teknik Elektro dari Politeknik Negeri Malang (IPK 3,60) dengan spesialisasi dalam pemeliharaan sistem elektronika. Saya memiliki rekam jejak yang terbukti dalam perawatan preventif, administrasi teknis, dan pemantauan sistem kelistrikan melalui magang di <strong>PT PLN (Persero)</strong> dan <strong>PT Kencana Tiara Gemilang</strong>. Berdedikasi pada keselamatan kerja (K3) dan efisiensi operasional.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="p-4 rounded-xl bg-blue-50">
+                    <div class="text-3xl font-bold text-blue-700">3.60</div>
+                    <div class="text-sm text-gray-500">IPK S1 Terapan</div>
+                </div>
+                <div class="p-4 rounded-xl bg-blue-50">
+                    <div class="text-3xl font-bold text-blue-700">BNSP</div>
+                    <div class="text-sm text-gray-500">Sertifikasi Senior</div>
+                </div>
+                <div class="p-4 rounded-xl bg-blue-50">
+                    <div class="text-3xl font-bold text-blue-700">2+</div>
+                    <div class="text-sm text-gray-500">Pengalaman Magang</div>
+                </div>
+                <div class="p-4 rounded-xl bg-blue-50">
+                    <div class="text-3xl font-bold text-blue-700">95%</div>
+                    <div class="text-sm text-gray-500">Efisiensi Proyek</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keahlian Teknik -->
+    <section id="skills" class="py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 text-blue-900">Keahlian Utama</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-microchip"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Automation & Control</h3>
+                    <p class="text-gray-600">PLC (OMRON, Schneider), Ladder Diagram, TIA Portal, Arduino IDE, dan integrasi hardware IoT.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-bolt"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Electrical Maintenance</h3>
+                    <p class="text-gray-600">Preventive Maintenance trafo, troubleshooting sistem tenaga, dan administrasi teknis distribusi.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-chart-simple"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Technical Tools</h3>
+                    <p class="text-gray-600">MATLAB, Proteus, FluidSIM, SQL Database, dan dokumentasi administrasi teknis tinggi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyek Unggulan -->
+    <section id="projects" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 text-blue-900">Proyek Unggulan</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                
+                <!-- Proyek 1: PLC -->
+                <div class="project-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
+                    <div class="h-64 img-container">
+                        <img src="projek-plc.jpeg" alt="Proyek PLC" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'flex flex-col items-center p-6 bg-slate-900 text-blue-400 w-full h-full justify-center\'><i class=\'fa-solid fa-microchip text-6xl mb-4\'></i><p class=\'text-sm font-mono opacity-70 tracking-widest uppercase\'>Ladder Logic Schematic</p></div>';">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Prototype Traffic Light (PLC OMRON)</h3>
+                            <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded font-bold uppercase">PLC</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Pengembangan logika kontrol kompleks menggunakan Ladder Diagram (LD) dengan sistem interlock untuk keamanan persimpangan jalan.</p>
+                    </div>
+                </div>
+
+                <!-- Proyek 2: IoT -->
+                <div class="project-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
+                    <div class="h-64 img-container">
+                        <img src="projek-iot.jpeg" alt="Proyek IoT" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'flex flex-col items-center p-6 bg-slate-900 text-red-400 w-full h-full justify-center\'><i class=\'fa-solid fa-fire-extinguisher text-6xl mb-4\'></i><p class=\'text-sm font-mono opacity-70 tracking-widest uppercase\'>IoT Fire System</p></div>';">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">ESP32 IoT Fire Alarm System</h3>
+                            <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded font-bold uppercase">IoT</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Integrasi sensor asap dengan notifikasi mobile real-time untuk deteksi dini darurat di gedung industri.</p>
+                    </div>
+                </div>
+
+                <!-- Proyek 3: Solar MPPT -->
+                <div class="project-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
+                    <div class="h-64 img-container">
+                        <img src="projek-solar.jpeg" alt="Proyek Solar" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'flex flex-col items-center p-6 bg-slate-900 text-yellow-400 w-full h-full justify-center\'><i class=\'fa-solid fa-sun text-6xl mb-4\'></i><p class=\'text-sm font-mono opacity-70 tracking-widest uppercase\'>Solar MPPT System</p></div>';">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">MPPT Solar Charge Controller</h3>
+                            <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded font-bold uppercase">Energi</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Desain topologi DC-DC converter dengan efisiensi konversi 95% untuk optimasi penyerapan energi surya.</p>
+                    </div>
+                </div>
+
+                <!-- Proyek 4: Absensi -->
+                <div class="project-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
+                    <div class="h-64 img-container">
+                        <img src="projek-absensi.jpg" alt="Proyek Absensi" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'flex flex-col items-center p-6 bg-slate-900 text-green-400 w-full h-full justify-center\'><i class=\'fa-solid fa-id-card text-6xl mb-4\'></i><p class=\'text-sm font-mono opacity-70 tracking-widest uppercase\'>RFID Attendance</p></div>';">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">IoT Employee Attendance (RFID)</h3>
+                            <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded font-bold uppercase">Software</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Sistem sinkronisasi data otomatis antara hardware IoT dan web server melalui SQL untuk pelaporan kehadiran real-time.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Hubungi Saya -->
+    <section id="contact" class="py-24 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Mari Berdiskusi</h2>
+            <p class="text-xl text-blue-100 mb-12">Siap memberikan kontribusi teknis untuk sistem otomasi dan pemeliharaan di industri Anda.</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="mailto:muhammadramandahidayat@gmail.com" class="bg-white text-blue-800 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition flex items-center">
+                    <i class="fa-solid fa-envelope mr-2"></i> Kirim Email
+                </a>
+                <a href="https://wa.me/6285162601427" class="border-2 border-white px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition flex items-center">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-100 text-center text-gray-400 text-sm bg-gray-50">
+        <p>&copy; 2024 Muhammad Ramanda Hidayat. Dibuat untuk Karir Engineering.</p>
+    </footer>
+
 </body>
 </html>
