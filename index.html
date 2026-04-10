@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
-        .project-card:hover { transform: translateY(-8px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .hero-with-bg { position: relative; overflow: hidden; }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hero-with-bg {
+            position: relative;
+            overflow: hidden;
+        }
+
         .hero-with-bg::before {
-            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url('web.jpeg'), url('web2.jpeg'), url('web3.jpeg'); 
-            background-size: 33% auto; background-position: 0% center, 50% center, 100% center;
-            background-repeat: no-repeat; opacity: 0.07; filter: grayscale(100%) brightness(1.2);
-            z-index: 1; pointer-events: none;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('web.jpeg'), url('web2.jpeg'), url('web3.jpeg');
+            background-size: 33% auto;
+            background-position: 0% center, 50% center, 100% center;
+            background-repeat: no-repeat;
+            opacity: 0.07;
+            filter: grayscale(100%) brightness(1.2);
+            z-index: 1;
+            pointer-events: none;
         }
     </style>
 </head>
@@ -90,9 +119,9 @@
                 <div class="lg:w-7/12">
                     <h2 class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2">Kurikulum Vitae</h2>
                     <h3 class="text-3xl md:text-4xl font-bold text-blue-900 mb-10">Pendidikan & Pengalaman</h3>
-                    
+
                     <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
-                        
+
                         <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                             <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-blue-600 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"><i class="fa-solid fa-graduation-cap text-xs"></i></div>
                             <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl border-l-4 border-l-blue-600 shadow-sm">
@@ -106,13 +135,13 @@
                             <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-blue-100 text-blue-600 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"><i class="fa-solid fa-industry text-xs"></i></div>
                             <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-blue-50/50 p-4 rounded-xl border border-blue-100 italic">
                                 <time class="text-[10px] font-bold text-blue-500 uppercase">Magang Industri (D4)</time>
-                               <div class="text-slate-900 font-bold text-sm">Electrical Engineering Intern</div>
-<div class="text-gray-700 text-xs font-medium">PT PLN (Persero) ULP Dinoyo</div>
-<ul class="text-gray-500 text-[11px] mt-1 list-disc list-inside">
-    <li>Pemeliharaan preventif transformator & sistem grounding.</li>
-    <li>Verifikasi data teknis 100+ instalasi meteran baru/hari.</li>
-    <li>Koordinasi ROW jaringan listrik di 30 lokasi strategis.</li>
-</ul>
+                                <div class="text-slate-900 font-bold text-sm">Electrical Engineering Intern</div>
+                                <div class="text-gray-700 text-xs font-medium">PT PLN (Persero) ULP Dinoyo</div>
+                                <ul class="text-gray-500 text-[11px] mt-1 list-disc list-inside">
+                                    <li>Pemeliharaan preventif transformator & sistem grounding.</li>
+                                    <li>Verifikasi data teknis 100+ instalasi meteran baru/hari.</li>
+                                    <li>Koordinasi ROW jaringan listrik di 30 lokasi strategis.</li>
+                                </ul>
                             </div>
                         </div>
 
@@ -129,11 +158,11 @@
                             <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-gray-100 text-gray-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"><i class="fa-solid fa-tools text-xs"></i></div>
                             <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gray-50 p-4 rounded-xl border border-gray-200 italic">
                                 <time class="text-[10px] font-bold text-gray-500 uppercase">Magang Industri (D3)</time>
-                      <div class="text-slate-900 font-bold text-sm">Maintenance Engineering Intern</div>
-<div class="text-gray-700 text-xs font-medium">PT Kencana Tiara Gemilang</div>
-<ul class="text-gray-500 text-[11px] mt-1 list-disc list-inside">
-    <li>Pengembangan IoT Fire Alarm System berbasis ESP32.</li>
-</ul>
+                                <div class="text-slate-900 font-bold text-sm">Maintenance Engineering Intern</div>
+                                <div class="text-gray-700 text-xs font-medium">PT Kencana Tiara Gemilang</div>
+                                <ul class="text-gray-500 text-[11px] mt-1 list-disc list-inside">
+                                    <li>Pengembangan IoT Fire Alarm System berbasis ESP32.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -158,10 +187,18 @@
         <div class="max-w-6xl mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold text-blue-900 mb-12">Keahlian Teknis</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"><i class="fa-solid fa-microchip text-blue-600 text-3xl mb-4"></i><h4 class="font-bold">PLC & Automation</h4></div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"><i class="fa-solid fa-wifi text-blue-600 text-3xl mb-4"></i><h4 class="font-bold">IoT Systems</h4></div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"><i class="fa-solid fa-bolt text-blue-600 text-3xl mb-4"></i><h4 class="font-bold">Maintenance</h4></div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"><i class="fa-solid fa-code text-blue-600 text-3xl mb-4"></i><h4 class="font-bold">C++ / SQL</h4></div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"><i class="fa-solid fa-microchip text-blue-600 text-3xl mb-4"></i>
+                    <h4 class="font-bold">PLC & Automation</h4>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"><i class="fa-solid fa-wifi text-blue-600 text-3xl mb-4"></i>
+                    <h4 class="font-bold">IoT Systems</h4>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"><i class="fa-solid fa-bolt text-blue-600 text-3xl mb-4"></i>
+                    <h4 class="font-bold">Maintenance</h4>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"><i class="fa-solid fa-code text-blue-600 text-3xl mb-4"></i>
+                    <h4 class="font-bold">C++ / SQL</h4>
+                </div>
             </div>
         </div>
     </section>
@@ -174,8 +211,8 @@
                     <div class="h-56 bg-slate-800 overflow-hidden flex items-center justify-center relative">
                         <img src="projek-plc.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60">
                         <div class="absolute inset-0 flex flex-col items-center justify-center p-4">
-                           <i class="fa-solid fa-microchip text-4xl text-blue-400 mb-2"></i>
-                           <span class="text-xs font-mono text-white opacity-80 uppercase tracking-tighter">Logic Controller</span>
+                            <i class="fa-solid fa-microchip text-4xl text-blue-400 mb-2"></i>
+                            <span class="text-xs font-mono text-white opacity-80 uppercase tracking-tighter">Logic Controller</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -188,8 +225,8 @@
                     <div class="h-56 bg-slate-800 overflow-hidden flex items-center justify-center relative">
                         <img src="projek-iot.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60">
                         <div class="absolute inset-0 flex flex-col items-center justify-center p-4">
-                           <i class="fa-solid fa-wifi text-4xl text-cyan-400 mb-2"></i>
-                           <span class="text-xs font-mono text-white opacity-80 uppercase tracking-tighter">IoT Ecosystem</span>
+                            <i class="fa-solid fa-wifi text-4xl text-cyan-400 mb-2"></i>
+                            <span class="text-xs font-mono text-white opacity-80 uppercase tracking-tighter">IoT Ecosystem</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -202,8 +239,8 @@
                     <div class="h-56 bg-slate-800 overflow-hidden flex items-center justify-center relative">
                         <img src="projek-solar.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60">
                         <div class="absolute inset-0 flex flex-col items-center justify-center p-4">
-                           <i class="fa-solid fa-sun text-4xl text-yellow-400 mb-2"></i>
-                           <span class="text-xs font-mono text-white opacity-80 uppercase tracking-tighter">Renewable Energy</span>
+                            <i class="fa-solid fa-sun text-4xl text-yellow-400 mb-2"></i>
+                            <span class="text-xs font-mono text-white opacity-80 uppercase tracking-tighter">Renewable Energy</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -216,8 +253,8 @@
                     <div class="h-56 bg-slate-800 overflow-hidden flex items-center justify-center relative">
                         <img src="projek-absensi.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60">
                         <div class="absolute inset-0 flex flex-col items-center justify-center p-4">
-                           <i class="fa-solid fa-id-card text-4xl text-green-400 mb-2"></i>
-                           <span class="text-xs font-mono text-white opacity-80 uppercase tracking-tighter">Database Integration</span>
+                            <i class="fa-solid fa-id-card text-4xl text-green-400 mb-2"></i>
+                            <span class="text-xs font-mono text-white opacity-80 uppercase tracking-tighter">Database Integration</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -272,9 +309,20 @@
         document.querySelectorAll('#mobile-menu a').forEach(link => link.addEventListener('click', () => menu.classList.add('hidden')));
 
         const certModal = document.getElementById('certModal');
-        function openCertModal() { certModal.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
-        function closeCertModal() { certModal.classList.add('hidden'); document.body.style.overflow = 'auto'; }
-        certModal.addEventListener('click', (e) => { if (e.target === certModal) closeCertModal(); });
+
+        function openCertModal() {
+            certModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCertModal() {
+            certModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        certModal.addEventListener('click', (e) => {
+            if (e.target === certModal) closeCertModal();
+        });
     </script>
 </body>
+
 </html>
