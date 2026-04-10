@@ -17,12 +17,13 @@
         .img-container { background-color: #1e293b; display: flex; align-items: center; justify-content: center; color: white; overflow: hidden; }
         .img-container img { width: 100%; height: 100%; object-fit: cover; }
 
-             /* --- EFEK 3 GAMBAR BERBEDA & SELANG SELING --- */
+        /* --- EFEK 3 GAMBAR BERBEDA (KIRI, TENGAH, KANAN) --- */
         .hero-with-bg {
             position: relative; 
             overflow: hidden;
         }
 
+        /* Pseudo-element untuk mengatur 3 kolom gambar latar */
         .hero-with-bg::before {
             content: "";
             position: absolute;
@@ -31,22 +32,21 @@
             width: 100%;
             height: 100%;
             
-            /* MENGGUNAKAN 3 GAMBAR BERBEDA */
-            background-image: url('web.jpeg'), url('projek-plc.jpeg'), url('projek-iot.jpeg'); 
+            /* MENGGUNAKAN 3 GAMBAR BERBEDA SESUAI POSISI 1, 2, 3 */
+            background-image: 
+                url('web.jpeg'), 
+                url('projek-plc.jpeg'), 
+                url('projek-iot.jpeg'); 
             
-            /* Ukuran gambar diatur agar proporsional */
-            background-size: 380px auto, 320px auto, 350px auto; 
+            /* Mengatur ukuran: Masing-masing mengambil sekitar 1/3 lebar layar */
+            background-size: 33% auto, 33% auto, 33% auto; 
             
-            /* POSISI BERBEDA (Selang-Seling)
-               1. web.jpeg: Kiri Atas
-               2. projek-plc.jpeg: Tengah
-               3. projek-iot.jpeg: Kanan Bawah
-            */
-            background-position: left 2% top 8%, center center, right 2% bottom 8%;
+            /* POSISI HORIZONTAL: 0% (Kiri), 50% (Tengah), 100% (Kanan) */
+            background-position: 0% center, 50% center, 100% center;
             background-repeat: no-repeat;
             
-            /* Transparansi tipis (Watermark) */
-            opacity: 0.12; 
+            /* Transparansi tipis (Watermark) agar teks tetap terbaca tajam */
+            opacity: 0.1; 
             filter: grayscale(100%) brightness(1.4);
             
             z-index: 1; 
