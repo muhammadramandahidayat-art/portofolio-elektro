@@ -96,10 +96,12 @@
                 </div>
             </div>
             
-            <!-- Foto Profil Utama (UKURAN DIPERBESAR & LEBIH TINGGI) -->
+            <!-- Foto Profil Utama (DENGAN EFEK ZOOM IN) -->
             <div class="hidden md:flex justify-center">
                 <div class="w-full max-w-[400px] aspect-[3/4] rounded-3xl border-4 border-white/20 overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-all duration-500 bg-slate-800">
-                    <img src="foto-profil.jpeg" alt="Muhammad Ramanda Hidayat" class="w-full h-full object-cover object-top" 
+                    <!-- Ditambahkan class 'scale-125' untuk zoom in dan 'origin-top' agar wajah tidak terpotong -->
+                    <img src="foto-profil.jpeg" alt="Muhammad Ramanda Hidayat" 
+                         class="w-full h-full object-cover object-top transform scale-125 origin-top transition-transform duration-500 hover:scale-110" 
                          onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex flex-col items-center justify-center p-4 text-center\'><i class=\'fa-solid fa-user text-6xl mb-4\'></i><span class=\'text-sm opacity-75\'>Gunakan foto-profil.jpeg</span></div>';">
                 </div>
             </div>
