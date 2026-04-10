@@ -123,14 +123,15 @@
                             </div>
                             <div
                                 class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl border-l-4 border-l-blue-600 shadow-sm">
-                                <div class="flex flex-row justify-between items-center mb-2 gap-2">
-                                    <time class="font-bold text-blue-600 leading-tight text-sm md:text-base">D4 Sarjana
-                                        Terapan</time>
+                                <div class="flex flex-row justify-between items-center mb-2 gap-2 flex-nowrap">
+                                    <time class="font-bold text-blue-600 leading-tight text-sm md:text-base truncate">D4
+                                        Sarjana Terapan</time>
                                     <span
-                                        class="whitespace-nowrap text-[9px] md:text-[10px] font-bold py-0.5 px-2 bg-blue-100 text-blue-700 rounded-full">
+                                        class="whitespace-nowrap text-[9px] md:text-[10px] font-bold py-0.5 px-2 bg-blue-100 text-blue-700 rounded-full shrink-0">
                                         2024 — 2026
                                     </span>
                                 </div>
+
                                 <div class="text-slate-900 font-bold text-sm md:text-base">Politeknik Negeri Malang
                                 </div>
                                 <div class="text-xs md:text-sm font-semibold text-slate-700">Jurusan Teknik Elektro
@@ -139,87 +140,92 @@
                                 <p class="text-gray-400 text-[10px] md:text-[11px] mt-2 leading-tight">Sistem Otomasi &
                                     Maintenance</p>
                             </div>
+
+                            <div
+                                class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                                <div
+                                    class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-blue-100 text-blue-600 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                    <i class="fa-solid fa-industry text-xs"></i>
+                                </div>
+                                <div
+                                    class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-blue-50/50 p-4 rounded-xl border border-blue-100 italic">
+                                    <time class="text-[10px] font-bold text-blue-500 uppercase">Jan 2025 - Mei 2025
+                                    </time>
+                                    <div class="text-slate-900 font-bold text-sm">Electrical Engineering Intern </div>
+                                    <div class="text-gray-700 text-xs font-medium">PT PLN (Persero) ULP Dinoyo </div>
+                                    <p class="text-gray-500 text-[11px] mt-1 leading-tight">• Fokus pada pemeliharaan
+                                        preventif trafo, verifikasi data pelanggan, dan keamanan jaringan listrik (ROW).
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                                <div
+                                    class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-gray-400 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                    <i class="fa-solid fa-book-open text-xs"></i>
+                                </div>
+                                <div
+                                    class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl border-l-4 border-l-gray-400 shadow-sm">
+                                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2 gap-1">
+                                        <time class="font-bold text-gray-600 leading-tight">D3 Ahli Madya</time>
+                                        <span
+                                            class="w-fit text-[10px] font-bold py-0.5 px-2 bg-gray-100 text-gray-600 rounded-full">2021
+                                            — 2024</span>
+                                    </div>
+                                    <div class="text-slate-900 font-bold text-sm md:text-base">Politeknik Negeri Malang
+                                    </div>
+                                    <div class="text-xs md:text-sm font-semibold text-slate-700">Jurusan Teknik Elektro
+                                    </div>
+                                    <p class="text-gray-500 text-xs md:text-sm italic">Prodi Elektronika (GPA 3.49)</p>
+                                    <p class="text-gray-400 text-[10px] md:text-[11px] mt-2 leading-tight">Dasar
+                                        Kelistrikan
+                                        & Mikroprosesor</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                                <div
+                                    class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-gray-100 text-gray-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                    <i class="fa-solid fa-tools text-xs"></i>
+                                </div>
+                                <div
+                                    class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gray-50 p-4 rounded-xl border border-gray-200 italic">
+                                    <time class="text-[10px] font-bold text-gray-500 uppercase">Jan 2023 - Feb 2023
+                                    </time>
+                                    <div class="text-slate-900 font-bold text-sm">Maintenance Engineering Intern </div>
+                                    <div class="text-gray-700 text-xs font-medium">PT Kencana Tiara Gemilang </div>
+                                    <p class="text-gray-500 text-[11px] mt-1 leading-tight">• Pengembangan IoT Fire
+                                        Alarm
+                                        System berbasis ESP32 dan pemeliharaan mesin produksi manufaktur plastik.</p>
+                                </div>
+                            </div>
                         </div>
 
-                        <div
-                            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div onclick="openCertModal()"
+                            class="mt-8 p-4 md:p-6 rounded-2xl bg-slate-900 text-white flex items-center gap-4 md:gap-6 border-b-4 border-blue-500 cursor-pointer hover:bg-slate-800 transition-all shadow-lg active:scale-95 group relative overflow-hidden">
                             <div
-                                class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-blue-100 text-blue-600 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                                <i class="fa-solid fa-industry text-xs"></i>
+                                class="absolute top-0 right-0 w-16 h-16 bg-blue-500/10 rotate-45 translate-x-8 -translate-y-8">
                             </div>
                             <div
-                                class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-blue-50/50 p-4 rounded-xl border border-blue-100 italic">
-                                <time class="text-[10px] font-bold text-blue-500 uppercase">Jan 2025 - Mei 2025 </time>
-                                <div class="text-slate-900 font-bold text-sm">Electrical Engineering Intern </div>
-                                <div class="text-gray-700 text-xs font-medium">PT PLN (Persero) ULP Dinoyo </div>
-                                <p class="text-gray-500 text-[11px] mt-1 leading-tight">• Fokus pada pemeliharaan
-                                    preventif trafo, verifikasi data pelanggan, dan keamanan jaringan listrik (ROW).</p>
+                                class="text-3xl md:text-5xl text-blue-400 group-hover:scale-110 transition duration-300 shrink-0">
+                                <i class="fa-solid fa-award"></i>
                             </div>
-                        </div>
-
-                        <div
-                            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                            <div
-                                class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-gray-400 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                                <i class="fa-solid fa-book-open text-xs"></i>
-                            </div>
-                            <div
-                                class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl border-l-4 border-l-gray-400 shadow-sm">
-                                <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2 gap-1">
-                                    <time class="font-bold text-gray-600 leading-tight">D3 Ahli Madya</time>
+                            <div class="flex-grow">
+                                <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+                                    <h4 class="font-bold text-sm md:text-lg leading-tight">Senior Engineer Certified
+                                    </h4>
                                     <span
-                                        class="w-fit text-[10px] font-bold py-0.5 px-2 bg-gray-100 text-gray-600 rounded-full">2021
-                                        — 2024</span>
+                                        class="inline-block w-fit text-[9px] md:text-[10px] bg-blue-600/80 px-2 py-0.5 rounded-full uppercase italic tracking-wider font-semibold">BNSP</span>
                                 </div>
-                                <div class="text-slate-900 font-bold text-sm md:text-base">Politeknik Negeri Malang
-                                </div>
-                                <div class="text-xs md:text-sm font-semibold text-slate-700">Jurusan Teknik Elektro
-                                </div>
-                                <p class="text-gray-500 text-xs md:text-sm italic">Prodi Elektronika (GPA 3.49)</p>
-                                <p class="text-gray-400 text-[10px] md:text-[11px] mt-2 leading-tight">Dasar Kelistrikan
-                                    & Mikroprosesor</p>
+                                <p class="text-gray-400 text-[11px] md:text-sm uppercase tracking-wide mt-1">Pemelihara
+                                    Elektronika Industri </p>
                             </div>
-                        </div>
-
-                        <div
-                            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                            <div
-                                class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-gray-100 text-gray-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                                <i class="fa-solid fa-tools text-xs"></i>
-                            </div>
-                            <div
-                                class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gray-50 p-4 rounded-xl border border-gray-200 italic">
-                                <time class="text-[10px] font-bold text-gray-500 uppercase">Jan 2023 - Feb 2023 </time>
-                                <div class="text-slate-900 font-bold text-sm">Maintenance Engineering Intern </div>
-                                <div class="text-gray-700 text-xs font-medium">PT Kencana Tiara Gemilang </div>
-                                <p class="text-gray-500 text-[11px] mt-1 leading-tight">• Pengembangan IoT Fire Alarm
-                                    System berbasis ESP32 dan pemeliharaan mesin produksi manufaktur plastik.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div onclick="openCertModal()"
-                        class="mt-8 p-4 md:p-6 rounded-2xl bg-slate-900 text-white flex items-center gap-4 md:gap-6 border-b-4 border-blue-500 cursor-pointer hover:bg-slate-800 transition-all shadow-lg active:scale-95 group relative overflow-hidden">
-                        <div
-                            class="absolute top-0 right-0 w-16 h-16 bg-blue-500/10 rotate-45 translate-x-8 -translate-y-8">
-                        </div>
-                        <div
-                            class="text-3xl md:text-5xl text-blue-400 group-hover:scale-110 transition duration-300 shrink-0">
-                            <i class="fa-solid fa-award"></i>
-                        </div>
-                        <div class="flex-grow">
-                            <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
-                                <h4 class="font-bold text-sm md:text-lg leading-tight">Senior Engineer Certified </h4>
-                                <span
-                                    class="inline-block w-fit text-[9px] md:text-[10px] bg-blue-600/80 px-2 py-0.5 rounded-full uppercase italic tracking-wider font-semibold">BNSP</span>
-                            </div>
-                            <p class="text-gray-400 text-[11px] md:text-sm uppercase tracking-wide mt-1">Pemelihara
-                                Elektronika Industri </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <section id="skills" class="py-20 bg-gray-50">
