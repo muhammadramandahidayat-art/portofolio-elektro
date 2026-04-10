@@ -1,0 +1,43 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-with-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-with-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Pastikan path gambar benar jika dipindah ke folder images */
+    background-image: url('images/web.jpeg'), url('images/web2.jpeg'), url('images/web3.jpeg');
+    background-size: 33% auto;
+    background-position: 0% center, 50% center, 100% center;
+    background-repeat: no-repeat;
+    opacity: 0.07;
+    filter: grayscale(100%) brightness(1.2);
+    z-index: 1;
+    pointer-events: none;
+}
