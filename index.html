@@ -22,23 +22,24 @@
             position: relative; 
             overflow: hidden;
         }
-
-        /* Ini adalah bayangan gambar rangkaian kabel Anda */
+ /* Pengaturan agar foto tidak terlalu zoom */
         .hero-with-bg::before {
             content: "";
             position: absolute;
             top: 0; 
-            left: 0;
+            right: 0; /* Letakkan di sisi kanan */
             width: 100%;
             height: 100%;
             background-image: url('web.jpeg'); 
-            background-size: cover;
-            background-position: center;
+            
+            /* SOLUSI ZOOM: Ganti 'cover' menjadi 'contain' atau persentase */
+            background-size: contain; 
+            background-position: right center; /* Geser gambar ke kanan agar tidak menabrak teks di kiri */
             background-repeat: no-repeat;
             
-            /* Pengaturan Transparansi agar terlihat seperti watermark */
-            opacity: 0.15;       /* Nilai 0.15 membuat gambar samar-samar di belakang biru */
-            filter: grayscale(100%) brightness(1.2) contrast(1.1); /* Membuatnya hitam putih dan lebih terang */
+            /* Pengaturan Transparansi */
+            opacity: 0.15; 
+            filter: grayscale(100%) brightness(1.3) contrast(1.1);
             
             z-index: 1; 
             pointer-events: none;
