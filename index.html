@@ -14,7 +14,7 @@
         
         .project-card:hover { transform: translateY(-8px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         
-        /* Optimasi Background Hero agar tidak mengganggu di HP */
+        /* Background Hero */
         .hero-with-bg { position: relative; overflow: hidden; }
         .hero-with-bg::before {
             content: "";
@@ -30,12 +30,10 @@
             pointer-events: none;
         }
 
-        /* Mobile Menu Animation */
-        #mobile-menu { transition: transform 0.3s ease-in-out; }
-        #mobile-menu.hidden-menu { transform: translateY(-100%); }
+        /* Mobile Menu Transition */
+        #mobile-menu { transition: all 0.3s ease-in-out; }
     </style>
 </head>
-
 
 <body class="bg-gray-50 text-gray-900 overflow-x-hidden">
 
@@ -82,10 +80,10 @@
                         Lihat Proyek
                     </a>
                     <div class="flex gap-3 justify-center">
-                        <a href="https://wa.me/6285162601427" target="_blank" class="bg-green-500 w-14 h-14 flex items-center justify-center rounded-xl hover:scale-110 transition shadow-lg">
+                        <a href="https://wa.me/6285162601427" target="_blank" class="bg-green-500 w-14 h-14 flex items-center justify-center rounded-xl hover:scale-110 transition shadow-lg text-white">
                             <i class="fa-brands fa-whatsapp text-2xl"></i>
                         </a>
-                        <a href="https://linkedin.com/in/ramandahidayat/" target="_blank" class="bg-[#0077b5] w-14 h-14 flex items-center justify-center rounded-xl hover:scale-110 transition shadow-lg">
+                        <a href="https://linkedin.com/in/ramandahidayat/" target="_blank" class="bg-[#0077b5] w-14 h-14 flex items-center justify-center rounded-xl hover:scale-110 transition shadow-lg text-white">
                             <i class="fa-brands fa-linkedin-in text-2xl"></i>
                         </a>
                     </div>
@@ -128,9 +126,7 @@
                                 <i class="fa-solid fa-graduation-cap text-xs"></i>
                             </div>
                             <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
-                                <div class="flex items-center justify-between mb-1">
-                                    <time class="font-bold text-blue-600">D4 Sarjana Terapan</time>
-                                </div>
+                                <time class="font-bold text-blue-600">D4 Sarjana Terapan</time>
                                 <div class="text-slate-900 font-bold">Politeknik Negeri Malang</div>
                                 <p class="text-gray-500 text-sm italic">IPK 3.60 | Sistem Otomasi & Maintenance</p>
                             </div>
@@ -148,10 +144,15 @@
                         </div>
                     </div>
 
-                    <div class="mt-12 p-6 rounded-2xl bg-slate-900 text-white flex flex-col sm:flex-row items-center gap-6 border-b-4 border-blue-500">
-                        <div class="text-5xl text-blue-400"><i class="fa-solid fa-award"></i></div>
+                    <div onclick="openCertModal()" class="mt-12 p-6 rounded-2xl bg-slate-900 text-white flex flex-col sm:flex-row items-center gap-6 border-b-4 border-blue-500 cursor-pointer hover:bg-slate-800 transition-all shadow-lg active:scale-95 group">
+                        <div class="text-5xl text-blue-400 group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
                         <div class="text-center sm:text-left">
-                            <h4 class="font-bold text-lg">Senior Engineer Certified</h4>
+                            <h4 class="font-bold text-lg flex items-center justify-center sm:justify-start gap-2">
+                                Senior Engineer Certified 
+                                <span class="text-[10px] bg-blue-600 px-2 py-0.5 rounded-full uppercase italic">Klik untuk lihat</span>
+                            </h4>
                             <p class="text-gray-400 text-sm uppercase tracking-wide">BNSP - Pemelihara Elektronika Industri</p>
                         </div>
                     </div>
@@ -193,6 +194,7 @@
                         <p class="text-gray-600 mt-3 text-sm leading-relaxed">Monitoring sensor asap via dashboard real-time untuk proteksi gedung industri.</p>
                     </div>
                 </div>
+
                 <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg group">
                     <div class="h-56 bg-slate-800 overflow-hidden flex items-center justify-center relative">
                         <img src="projek-solar.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60">
@@ -201,7 +203,6 @@
                            <span class="text-xs font-mono text-white opacity-80 uppercase tracking-tighter">Renewable Energy</span>
                         </div>
                     </div>
-
                     <div class="p-6">
                         <span class="text-yellow-600 text-xs font-bold uppercase tracking-widest">Power Electronics</span>
                         <h3 class="text-xl font-bold mt-2">MPPT Solar Charge Controller</h3>
@@ -217,49 +218,47 @@
                            <span class="text-xs font-mono text-white opacity-80 uppercase tracking-tighter">Database Integration</span>
                         </div>
                     </div>
-
                     <div class="p-6">
                         <span class="text-green-600 text-xs font-bold uppercase tracking-widest">Software & Hardware</span>
                         <h3 class="text-xl font-bold mt-2">IoT Employee Attendance</h3>
                         <p class="text-gray-600 mt-3 text-sm leading-relaxed">Sinkronisasi data otomatis antara hardware RFID dan SQL Server untuk laporan real-time.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <footer id="contact" class="bg-white border-t border-gray-100 pt-20 pb-10">
-       <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl font-bold text-slate-900 mb-4">Tertarik Mengajak Saya Bergabung?</h2>
-            <p class="text-gray-500 mb-8">
-                Saya sedang mencari peluang karir di bidang <b>Maintenance Engineer, Supervisor,</b> atau <b>Management Trainee</b> di mana saya bisa mengaplikasikan keahlian otomasi dan kelistrikan saya.
-            </p>
-            <a href="CV-Ramanda-Hidayat.pdf" target="_blank" class="inline-flex items-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-800 transition shadow-lg">
-                <i class="fa-solid fa-file-pdf"></i> Lihat Curriculum Vitae (CV)
-            </a>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <a href="mailto:muhammadramandahidayat@gmail.com" class="p-6 rounded-2xl bg-gray-50 hover:bg-blue-50 transition-colors border border-gray-100 flex flex-col items-center group">
-                <i class="fa-solid fa-envelope text-blue-600 text-2xl mb-4 group-hover:scale-110 transition"></i>
-                <span class="text-sm font-bold text-slate-800">Email</span>
-                <span class="text-xs text-gray-500 mt-1">muhammadramandahidayat@gmail.com</span>
-            </a>
-            
-            <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-center">
-                <i class="fa-solid fa-location-dot text-red-500 text-2xl mb-4"></i>
-                <span class="text-sm font-bold text-slate-800">Domisili</span>
-                <span class="text-xs text-gray-500 mt-1 text-center">Sidoarjo, Jawa Timur</span>
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Tertarik Mengajak Saya Bergabung?</h2>
+                <p class="text-gray-500 mb-8">
+                    Saya sedang mencari peluang karir di bidang <b>Maintenance Engineer, Supervisor,</b> atau <b>Management Trainee</b>.
+                </p>
+                <a href="CV-Ramanda-Hidayat.pdf" target="_blank" class="inline-flex items-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-800 transition shadow-lg">
+                    <i class="fa-solid fa-file-pdf"></i> Lihat Curriculum Vitae (CV)
+                </a>
             </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                <a href="mailto:muhammadramandahidayat@gmail.com" class="p-6 rounded-2xl bg-gray-50 hover:bg-blue-50 transition-colors border border-gray-100 flex flex-col items-center group">
+                    <i class="fa-solid fa-envelope text-blue-600 text-2xl mb-4 group-hover:scale-110 transition"></i>
+                    <span class="text-sm font-bold text-slate-800">Email</span>
+                    <span class="text-xs text-gray-500 mt-1">muhammadramandahidayat@gmail.com</span>
+                </a>
+                
+                <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-center">
+                    <i class="fa-solid fa-location-dot text-red-500 text-2xl mb-4"></i>
+                    <span class="text-sm font-bold text-slate-800">Domisili</span>
+                    <span class="text-xs text-gray-500 mt-1 text-center">Sidoarjo, Jawa Timur</span>
+                </div>
 
-            <a href="https://linkedin.com/in/ramandahidayat/" target="_blank" class="p-6 rounded-2xl bg-gray-50 hover:bg-blue-50 transition-colors border border-gray-100 flex flex-col items-center group">
-                <i class="fa-brands fa-linkedin text-blue-700 text-2xl mb-4 group-hover:scale-110 transition"></i>
-                <span class="text-sm font-bold text-slate-800">LinkedIn</span>
-                <span class="text-xs text-gray-500 mt-1">Hubungkan Jaringan Profesional</span>
-            </a>
-        </div>
+                <a href="https://linkedin.com/in/ramandahidayat/" target="_blank" class="p-6 rounded-2xl bg-gray-50 hover:bg-blue-50 transition-colors border border-gray-100 flex flex-col items-center group">
+                    <i class="fa-brands fa-linkedin text-blue-700 text-2xl mb-4 group-hover:scale-110 transition"></i>
+                    <span class="text-sm font-bold text-slate-800">LinkedIn</span>
+                    <span class="text-xs text-gray-500 mt-1 text-center">Hubungkan Jaringan Profesional</span>
+                </a>
+            </div>
 
             <div class="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-gray-400 uppercase tracking-widest">
                 <p>© 2026 M. Ramanda Hidayat</p>
@@ -272,7 +271,20 @@
         </div>
     </footer>
 
+    <div id="certModal" class="fixed inset-0 z-[150] hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm shadow-2xl">
+        <div class="relative max-w-4xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl transform transition-all animate-in zoom-in duration-300">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 class="font-bold text-blue-900">Sertifikat BNSP - M. Ramanda Hidayat</h3>
+                <button onclick="closeCertModal()" class="text-gray-500 hover:text-red-600 transition text-3xl px-2 font-light">&times;</button>
+            </div>
+            <div class="p-2 bg-gray-100 flex justify-center items-center">
+                <img src="sertifikat-bnsp.jpeg" alt="Sertifikat BNSP" class="max-h-[80vh] object-contain shadow-inner">
+            </div>
+        </div>
+    </div>
+
     <script>
+        // Navigasi Mobile
         const btn = document.getElementById('menu-btn');
         const menu = document.getElementById('mobile-menu');
 
@@ -280,25 +292,35 @@
             menu.classList.toggle('hidden');
         });
 
-        // Tutup menu saat link diklik (untuk mobile)
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.add('hidden');
             });
         });
-    </script>
 
-    <div id="certModal" class="fixed inset-0 z-[150] hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm shadow-2xl">
-        <div class="relative max-w-4xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl transform transition-all">
-            <div class="flex justify-between items-center p-4 border-b">
-                <h3 class="font-bold text-blue-900">Sertifikat BNSP - M. Ramanda Hidayat</h3>
-                <button onclick="closeModal()" class="text-gray-500 hover:text-red-600 transition text-2xl px-2">&times;</button>
-            </div>
-            <div class="p-2 bg-gray-100 flex justify-center items-center">
-                <img id="certImage" src="sertifikat-bnsp.jpeg" alt="Sertifikat BNSP" class="max-h-[80vh] object-contain shadow-inner">
-            </div>
-        </div>
-    </div>
+        // Modal Sertifikat
+        const certModal = document.getElementById('certModal');
+
+        function openCertModal() {
+            certModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Kunci scroll
+        }
+
+        function closeCertModal() {
+            certModal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Aktifkan scroll
+        }
+
+        // Close modal saat klik di luar gambar
+        certModal.addEventListener('click', (e) => {
+            if (e.target === certModal) closeCertModal();
+        });
+        
+        // Close modal saat tekan tombol ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") closeCertModal();
+        });
+    </script>
 
 </body>
 </html>
