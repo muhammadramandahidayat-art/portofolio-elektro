@@ -41,3 +41,32 @@ body {
     z-index: 1;
     pointer-events: none;
 }
+
+/* style.css */
+
+/* Animasi muncul perlahan */
+.fade-in-up {
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cursor kedap-kedip untuk efek mengetik */
+.typing-cursor::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
