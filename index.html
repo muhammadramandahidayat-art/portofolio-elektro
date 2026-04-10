@@ -7,53 +7,10 @@
     <title>Portofolio | Muhammad Ramanda Hidayat</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .gradient-bg {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .hero-with-bg {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-with-bg::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('web.jpeg'), url('web2.jpeg'), url('web3.jpeg');
-            background-size: 33% auto;
-            background-position: 0% center, 50% center, 100% center;
-            background-repeat: no-repeat;
-            opacity: 0.07;
-            filter: grayscale(100%) brightness(1.2);
-            z-index: 1;
-            pointer-events: none;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-gray-50 text-gray-900 overflow-x-hidden">
-
     <nav class="fixed w-full z-[100] bg-white/90 backdrop-blur-lg shadow-sm">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <span class="font-bold text-lg md:text-xl tracking-tight text-blue-800">Muhammad Ramanda Hidayat</span>
@@ -343,27 +300,8 @@
         </div>
     </div>
 
-    <script>
-        const btn = document.getElementById('menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-        document.querySelectorAll('#mobile-menu a').forEach(link => link.addEventListener('click', () => menu.classList.add('hidden')));
+<script src="script.js"></script>
 
-        const certModal = document.getElementById('certModal');
-
-        function openCertModal() {
-            certModal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeCertModal() {
-            certModal.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-        certModal.addEventListener('click', (e) => {
-            if (e.target === certModal) closeCertModal();
-        });
-    </script>
 </body>
 
 </html>
